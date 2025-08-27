@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raj Shekhar Sharma | Space Innovator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      color: #222;
+    }
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      padding: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 4;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 42px;
+      justify-content: center;
+      font-size: 1.1em;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav ul li a:hover {
+      color: #2156dd;
+    }
+    header {
+      text-align: center;
+      padding: 65px 16px 38px 16px;
+      background: #fff;
+      margin-bottom: 20px;
+    }
+    header img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 18px;
+      border: 4px solid #e1e8f0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.09);
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+    }
+    header h2 {
+      font-size: 1.22em;
+      font-weight: 400;
+      color: #666;
+      margin-top: 0;
+    }
+    section {
+      max-width: 960px;
+      margin: 0 auto 32px auto;
+      padding: 32px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(20,42,70,0.08);
+    }
+    section h3 {
+      font-size: 1.35em;
+      margin-bottom: 24px;
+      color: #2156dd;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+    .card {
+      background: #f2f6ff;
+      border: 1px solid #e1e8f0;
+      border-radius: 12px;
+      padding: 26px 18px 18px 18px;
+      min-height: 230px;
+      text-align: left;
+      box-sizing: border-box;
+    }
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 1.15em;
+    }
+    .card-img {
+      width: 100%;
+      height: 130px;
+      background: #ececec;
+      color: #888;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin-bottom: 13px;
+      overflow: hidden;
+    }
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    /* Certificates styling */
+    .certificates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-bottom: 16px;
+      justify-content: center;
+    }
+    .certificate {
+      flex: 1 1 300px;
+      background: #fafffa;
+      border: 1px solid #e1e8f0;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 8px;
+      text-align: left;
+      box-sizing: border-box;
+    }
+    .certificate img {
+      width: 100%;
+      max-width: 290px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      background: #ececec;
+    }
+    .media-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+    .media-item {
+      margin-bottom: 18px;
+      background: #f4f8ff;
+      border-radius: 15px;
+      padding: 22px;
+      border: 1px solid #e1e8f0;
+      box-sizing: border-box;
+      min-height: 220px;
+    }
+    .media-item iframe {
+      width: 100%;
+      height: 150px;
+      border-radius: 9px;
+      margin-bottom: 10px;
+      border: none;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 18px;
+      list-style-type: disc;
+      padding-left: 18px;
+    }
+    .contact-links {
+      margin-top: 12px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .contact-links a {
+      text-decoration: none;
+      color: #2156dd;
+      font-weight: 600;
+      font-size: 1.12em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+    .contact-links a:hover {
+      color: #0077b5;
+    }
+    .contact-links img {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+    }
+    @media (max-width: 900px) {
+      section {
+        padding: 16px;
+      }
+      .cards, .media-list, .certificates {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+      }
+      .media-item iframe {
+        height: 180px;
+      }
+      header img {
+        width: 105px;
+      }
+    }
+    @media (max-width: 600px) {
+      .media-list {
+        grid-template-columns: 1fr;
+      }
+      header h1 {
+        font-size: 1.4em;
+      }
+      section h3 {
+        font-size: 1.04em;
+      }
+      .certificate img, .card-img img {
+        max-width: 170px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#media">Videos</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="about">
+    <img src="profile.jpg" alt="Raj Shekhar Sharma Photo"><!-- Replace with actual image filename -->
+    <h1>Raj Shekhar Sharma</h1>
+    <h2>Space Science Innovator | IBR Achiever | Google AI Certified</h2>
+    <p>
+      An aspiring science and technology enthusiast from Jalandhar, Punjab.<br>
+      Focused on deep space communication, AI, and inspiring youth.
+    </p>
+  </header>
+  <!-- Honouring Moments Section -->
+<section id="honours">
+  <h3>Honouring Moments</h3>
+  <div class="cards">
+    <div class="card">
+      <div class="card-title">Honoured by Dr. Himanshu Aggarwal, IAS & DC</div>
+      <div class="card-img">
+        <img src="20250812_125026.jpg" alt="Raj honoured by IAS DC Dr Himanshu Aggarwal"><!-- Image 1 -->
+      </div>
+      <div>
+        Received recognition and award from District Commissioner Dr. Himanshu Aggarwal (IAS), highlighting extraordinary achievement.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Honoured by Head of Diocese Board, Jalandhar</div>
+      <div class="card-img">
+        <img src="Untitled-3.JPG" alt="Raj honoured by Head of Diocese Board"><!-- Image 2 -->
+      </div>
+      <div>
+        Felicitated by the leader of the Diocese Board for outstanding academic and innovation excellence.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Raj Shekhar Sharma with IBR Medals</div>
+      <div class="card-img">
+        <img src="IMG-20250820-WA0011.jpg" alt="Raj Shekhar Sharma IBR Medal"><!-- Image 3 -->
+      </div>
+      <div>
+        Wearing the prestigious India Book of Records medals with pride after national achievement.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Honoured by Dr. Himanshu Aggarwal, IAS & DC</div>
+      <div class="card-img">
+        <img src="IMG-20250812-WA0036.jpg" alt="Raj awarded by IAS DC Dr Himanshu Aggarwal"><!-- Image 4 -->
+      </div>
+      <div>
+        Awarded the India Book of Records medal and certificate by District Commissioner Dr. Himanshu Aggarwal (IAS).
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="achievements">
+    <h3>Major Achievements</h3>
+    <div class="cards">
+      <div class="card">
+        <div class="card-title">Space Message Transmission</div>
+        <div class="card-img">
+          <img src="spacespeak.png" alt="SpaceSpeak Certificate"><!-- Replace with actual image filename -->
+        </div>
+        <div>
+          Sent a personal family message into deep space and received official recognition from SpaceSpeak in 2025.<br>
+          <b>Certificate Date:</b> July 9, 2025<br>
+          
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">India Book of Records – IBR Achiever</div>
+        <div class="card-img">
+          <img src="ibr.png" alt="India Book of Records Certificate"><!-- Replace with actual image filename -->
+        </div>
+        <div>
+          Honored as an IBR Achiever for transmitting a message into space at the age of 15.<br>
+          <b>Certificate Date:</b> July 24, 2025
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h3>Google AI Certificates</h3>
+    <div class="certificates">
+      <div class="certificate">
+        <img src="ai.png" alt="Introduction to AI Certificate"><!-- Replace with actual image filename -->
+        <b>Introduction to AI</b><br>
+        Completed August 11, 2025<br>
+        <a href="https://coursera.org/verify/I43U7313BWA9" target="_blank">Verify</a>
+      </div>
+      <div class="certificate">
+        <img src="prompting.png" alt="Discover the Art of Prompting Certificate"><!-- Replace with actual image filename -->
+        <b>Discover the Art of Prompting</b><br>
+        Completed August 26, 2025<br>
+        <a href="https://coursera.org/verify/FP0D2D90BTUR" target="_blank">Verify</a>
+      </div>
+      <div class="certificate">
+        <img src="productivity.png" alt="Maximize Productivity With AI Tools Certificate"><!-- Replace with actual image filename -->
+        <b>Maximize Productivity With AI Tools</b><br>
+        Completed August 14, 2025<br>
+        <a href="https://coursera.org/verify/U15BZ1XW5UFK" target="_blank">Verify</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="media">
+    <h3>Documentaries & Video Features</h3>
+    <div class="media-list">
+      <div class="media-item">
+        <iframe src="https://www.youtube.com/embed/FJRIObJnih0" allowfullscreen></iframe>
+        <b> Space message Documentary</b><br>
+       Youngest Individual to send a personal message into deep space
+      </div>
+      <div class="media-item">
+        <iframe src="https://www.youtube.com/embed/bzLbLDdOyFo" allowfullscreen></iframe>
+        <b>Unboxing My India Book of Records</b><br>
+        Experience the special moment of receiving national recognition.
+      </div>
+      <div class="media-item">
+        <iframe src="https://www.youtube.com/embed/wQwvfvJUa34" allowfullscreen></iframe>
+        <b>Space Message Update</b><br>
+        Presenting the latest updates about transmitting a personal message into space.
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h3>Skills & Interests</h3>
+    <ul class="skills-list">
+      <li>Deep Space Communication</li>
+      <li>Web Development (HTML/CSS)</li>
+      <li>Artificial Intelligence</li>
+      <li>Physics & Mathematics</li>
+      <li>Public Speaking</li>
+      <li>YouTube Content Creation</li>
+    </ul>
+    <div>
+      <b>YouTube Channel:</b>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Icon">
+
+  </section>
+
+  <section id="contact">
+    <h3>Contact & Social</h3>
+    <div class="contact-links">
+      <a href="mailto:rvrt555@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon">Email</a>
+      <a href="https://www.instagram.com/rajs112k?igsh=MTFwaGVpcmJ1NGRn" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon">Instagram</a>
+      <a href="https://www.linkedin.com/in/raj-shekhar-sharma-79a503373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon">LinkedIn</a>
+    </div>
+    <form style="margin-top:28px;">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br>
+      <input type="submit" value="Send">
+    </form>
+  </section>
+</body>
+</html>
